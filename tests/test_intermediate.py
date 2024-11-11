@@ -33,8 +33,8 @@ class TestIntermediateFunctions(unittest.TestCase):
         self.assertEqual(create_new_tuple((5, 10, 15, 20)), (5, 10))
 
     def test_check_if_value_exists(self):
-        self.assertTrue(check_if_value_exists((5, 10, 15, 20), 15))
-        self.assertFalse(check_if_value_exists((5, 10, 15, 20), 25))
+        self.assertTrue(check_if_value_exists((5, 10, 15, 20), 15), True)
+        self.assertFalse(check_if_value_exists((5, 10, 15, 20), 25), False)
 
     def test_find_intersection(self):
         set1 = {1, 2, 3, 4}

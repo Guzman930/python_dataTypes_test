@@ -1,4 +1,5 @@
 def create_squares_of_evens():
+    evenSquares = []
     """
     Task:
     - Create a list of squares for all even numbers from 1 to 20 using list comprehension.
@@ -6,10 +7,14 @@ def create_squares_of_evens():
     Return:
     - The list of squares of even numbers.
     """
-    pass
+    for i in range(1, 11):
+        if i % 2 == 0:
+            evenSquares.append(i**2)
+    return evenSquares
 
 
 def convert_to_dict(students):
+    studentsDict = {}
     """
     Task:
     - Convert the list of student tuples into a dictionary where the name is the key and the grade is the value.
@@ -17,8 +22,9 @@ def convert_to_dict(students):
     Return:
     - The dictionary created from the list of students.
     """
-    pass
-
+    for i in students:
+        studentsDict[i[0]] = i[1]
+    return studentsDict
 
 def access_value_x(nested):
     """
@@ -28,7 +34,7 @@ def access_value_x(nested):
     Return:
     - The value of 'x' (which is 10).
     """
-    pass
+    return nested["c"]["x"]
 
 
 def append_to_list_in_dict(nested):
@@ -39,7 +45,8 @@ def append_to_list_in_dict(nested):
     Return:
     - The updated dictionary.
     """
-    pass
+    nested["a"] = nested["a"] + [6]
+    return nested
 
 
 def convert_tuple_to_list_and_append(nested):
@@ -50,4 +57,5 @@ def convert_tuple_to_list_and_append(nested):
     Return:
     - The updated dictionary.
     """
-    pass
+    nested["b"] = list(nested["b"]) + [6]
+    return nested

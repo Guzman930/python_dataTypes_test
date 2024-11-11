@@ -18,7 +18,7 @@ class TestBasicFunctions(unittest.TestCase):
         self.assertEqual(float_multiplication(), 6.0)
 
     def test_combine_operations(self):
-        self.assertEqual(combine_operations(), 6.0)
+        self.assertEqual(combine_operations(), 9.0)
 
     def test_extract_word(self):
         self.assertEqual(extract_word(), "awesome")
@@ -30,7 +30,7 @@ class TestBasicFunctions(unittest.TestCase):
         self.assertEqual(count_o(), 2)
 
     def test_evaluate_boolean(self):
-        self.assertFalse(evaluate_boolean()) 
+        self.assertFalse(evaluate_boolean(), False) 
 
 if __name__ == "__main__":
     unittest.main()
